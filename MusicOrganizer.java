@@ -59,4 +59,8 @@ public class MusicOrganizer
             files.remove(index);
         }
     }
+    public void nothing()
+    {
+        
+    }
 }
