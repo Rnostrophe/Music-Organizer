@@ -53,7 +53,7 @@ public class MusicOrganizer
         }
     }
     /**
-     * List a file from the collection.
+     * List all file from the collection.
      * @param index The index of the file to be listed.
      */
     public void listAllFiles()
@@ -61,6 +61,20 @@ public class MusicOrganizer
         for(String filename : files){
             System.out.println(filename);
         }
+    }
+    // Question 5. 
+    // You could, but it would be very impractical, because
+    // if you had a limited amount of print methods in listAllFiles,
+    // the listAllFiles method would not be able to take in account added files.
+    // So theoretically, you'd need an infinite amount of println.
+    
+    public void listWithIndex()
+    {
+        for(String filename : files){
+            int position = files.indexOf(filename);
+            System.out.println(position + ": " + filename);
+        }
+        
     }
     /**
      * Remove a file from the collection.
