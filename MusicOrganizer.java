@@ -112,4 +112,25 @@ public class MusicOrganizer
             return false;
         }
     }
+    /**
+     * List the names of files matching the given search string
+     * @param searchString The string to match.
+     */
+    public void listMatching(String searchString)
+    {
+        boolean match = true;
+        for(String filename : files){
+            if(filename.contains(searchString)){
+                // A match.
+                System.out.println(filename);
+                match = true;
+            }
+            else{
+                match = false;
+            }
+        }
+        if(match == false){
+            System.out.println("No file names match found");
+        }
+    }
 }
